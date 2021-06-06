@@ -1,6 +1,10 @@
 import { Request, Response, NextFunction } from "express";
 import * as dotenv from "dotenv";
-import userService from "../services/userService";
+import {
+  register,
+  checkEmailExist,
+  checkUserExist,
+} from "../services/userService";
 import generateToken from "../middlewares/generateToken";
 import bcrypt from "bcrypt";
 
@@ -23,7 +27,7 @@ const registration = async (
         msg: "Password must be at least 8 characters.",
       });
     } else {
-      const userExists = await userService.checkEmailExist(email);
+      const userExists = await checkEmailExist(email);
 
       if (userExists) {
         return res
@@ -39,7 +43,7 @@ const registration = async (
         password: passwordHash,
       };
 
-      const user = await userService.registration(newUser);
+      const user = await register(newUser);
 
       if (user) {
         res.status(200).send({
@@ -68,7 +72,7 @@ const login = async (req: Request, res: Response, next: NextFunction) => {
       });
     } else {
       try {
-        const user = await userService.checkUserExist(req.body);
+        const user = await checkUserExist(req.body);
         if (user === undefined || user === null) {
           return res
             .status(401)

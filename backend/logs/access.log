@@ -13,3 +13,6 @@
 ::1 - - [06/Jun/2021:15:46:41 +0000] "POST /api/user/login HTTP/1.1" 200 168 "-" "PostmanRuntime/7.28.0"
 ::1 - - [06/Jun/2021:15:47:39 +0000] "POST /api/user/login HTTP/1.1" 200 168 "-" "PostmanRuntime/7.28.0"
 ::1 - - [06/Jun/2021:15:48:55 +0000] "POST /api/user/login HTTP/1.1" 200 350 "-" "PostmanRuntime/7.28.0"
+::1 - - [06/Jun/2021:19:25:22 +0000] "POST /api/user/login HTTP/1.1" 200 350 "-" "PostmanRuntime/7.28.0"
+::1 - - [06/Jun/2021:19:26:05 +0000] "POST /api/user/registration HTTP/1.1" 200 45 "-" "PostmanRuntime/7.28.0"
+::1 - - [06/Jun/2021:23:35:58 +0000] "POST /api/user/login HTTP/1.1" 200 355 "http://localhost:3000/" "Mozilla/5.0 (Linux; Android 5.0; SM-G900P Build/LRX21T) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.77 Mobile Safari/537.36"

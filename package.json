@@ -2,10 +2,11 @@
   "name": "mern-auth-ts",
   "version": "1.0.0",
   "description": "",
-  "main": "backend/server.ts",
+  "main": "server.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon backend/server.ts"
+    "start": "nodemon server.ts",
+    "start:prod": "NODE_ENV=production nodemon server.ts"
   },
   "author": "",
   "license": "ISC",
