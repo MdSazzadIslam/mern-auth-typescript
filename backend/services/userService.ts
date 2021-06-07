@@ -15,8 +15,7 @@ const checkEmailExist = async (email: string) => {
   return await User.findOne({ email: email });
 };
 
-const checkUserExist = async (data: IUser) => {
-  const { email, password } = data;
+const checkUserExist = async (email: string, password: string) => {
   return await User.findOne({ email }).select("+password");
 };
 

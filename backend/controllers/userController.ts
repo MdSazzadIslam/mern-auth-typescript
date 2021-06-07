@@ -28,7 +28,7 @@ const registration = async (
       });
     } else {
       const userExists = await checkEmailExist(email);
-      console.log(userExists);
+
       if (userExists) {
         return res
           .status(409)
@@ -72,7 +72,7 @@ const login = async (req: Request, res: Response, next: NextFunction) => {
       });
     } else {
       try {
-        const user = await checkUserExist(req.body);
+        const user = await checkUserExist(req.body.email, req.body.password);
         if (user === undefined || user === null) {
           return res
             .status(401)
