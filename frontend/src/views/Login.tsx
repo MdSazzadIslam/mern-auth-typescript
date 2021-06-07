@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import { login } from "../services/userService";
 import { IUser } from "../types/userType";
 
@@ -15,6 +15,8 @@ import Button from "../components/Button";
 }
  */
 const Login: React.FC = () => {
+  const history = useHistory();
+
   const [user, setUser] = useState<IUser | {}>();
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -35,6 +37,10 @@ const Login: React.FC = () => {
         if (status !== 200) {
           throw new Error("Error!");
         }
+        history.push({
+          pathname: "/dashboard",
+          state: { user: data },
+        });
         alert(data.msg);
       })
       .catch((err: any) => console.log(err));

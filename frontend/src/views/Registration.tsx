@@ -7,15 +7,8 @@ import Container from "../components/Container";
 import Title from "../components/Title";
 import Input from "../components/Input";
 import Button from "../components/Button";
-import { useHistory } from "react-router-dom";
-
-/* interface Props {
-  users: IUser;
-  login: (e: React.FormEvent, user: IUser | any) => void;
-} */
 
 const Registration: React.FC = () => {
-  const history = useHistory();
   const [user, setUser] = useState<IUser | {}>();
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
