@@ -20,7 +20,7 @@ const Registration: React.FC = () => {
     }));
   };
 
-  const handleLogin = (e: React.FormEvent, user: IUser | any): void => {
+  const handleRegistration = (e: React.FormEvent, user: IUser | any): void => {
     e.preventDefault();
     debugger;
     registration(user)
@@ -37,39 +37,49 @@ const Registration: React.FC = () => {
   return (
     <Wrapper>
       <Container>
-        <form onSubmit={(e) => handleLogin(e, user)}>
+        <form onSubmit={(e) => handleRegistration(e, user)}>
           <Title>Registration </Title>
           <Input
             type="text"
             placeholder="Write your first name here..."
             name="firstName"
-            onChange={(e) => handleChange(e)}
+            onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+              handleChange(e)
+            }
+            required={true}
           />
           <Input
             type="text"
             placeholder="Write your last name here..."
             name="lastName"
-            onChange={(e) => handleChange(e)}
+            onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+              handleChange(e)
+            }
+            required={true}
           />
 
           <Input
             type="text"
             placeholder="Write your email here..."
             name="email"
-            onChange={(e) => handleChange(e)}
+            onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+              handleChange(e)
+            }
+            required={true}
           />
 
           <Input
             type="password"
             placeholder="Write your password here..."
             name="password"
-            onChange={(e) => handleChange(e)}
+            onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+              handleChange(e)
+            }
+            required={true}
           />
 
           <Link to="/">Login</Link>
-          <Button type="submit" disabled={user ? false : true}>
-            Registration
-          </Button>
+          <Button disabled={user ? false : true} title="Login" type="submit" />
         </form>
       </Container>
     </Wrapper>

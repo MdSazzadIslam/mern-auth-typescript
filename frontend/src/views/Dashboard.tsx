@@ -1,12 +1,18 @@
-import React, { useEffect } from "react";
-import { useLocation } from "react-router-dom";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import styled from "styled-components";
 
 const Wrapper = styled.section`
-  background: white;
-  min-height: 100vh;
+  height: 100vh;
+
+  width: 100vw;
+  align-self: stretch;
+  overflow: scroll;
+  background: linear-gradient(
+    to bottom right,
+    rgb(12, 157, 197),
+    rgb(201, 109, 216)
+  );
 `;
 
 const Title = styled.h1`
@@ -14,17 +20,14 @@ const Title = styled.h1`
   justify-content: center;
   align-items: center;
 `;
+
 const Dashboard = (props: any) => {
-  const location = useLocation();
-
-  useEffect(() => {
-    console.log(props.location.state.user);
-  }, [location]);
-
   return (
     <Wrapper>
       <Header />
-      <Title>Welcome {props.location.state.user.email}</Title>
+      <Title>
+        Welcome {!props.location ? props.location.state.user.email : ""}
+      </Title>
       <Footer title="Copyright &copy;  2021 Md Sazzadul Islam" />
     </Wrapper>
   );

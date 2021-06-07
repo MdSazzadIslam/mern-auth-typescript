@@ -15,11 +15,9 @@ const main = async () => {
 
   const app: Application = express();
   app.use(express.json());
-  //app.use(express.urlencoded({ extended: false }));
+  app.use(express.urlencoded({ extended: false }));
   app.use(cors());
-  //Bodyparser middleware
-  app.use(bodyParser.json());
-  app.use(bodyParser.urlencoded({ extended: false }));
+
   //create a write stream(in append mode)
   //morgan only use for developement purpose
   if (process.env.NODE_ENV === "development") {
