@@ -1,5 +1,5 @@
 import styled from "styled-components";
-const Tit = styled.p`
+const Titles = styled.p`
   color: #444;
   font-size: 1.2em;
   font-weight: bold;
@@ -14,6 +14,6 @@ interface Titleprops {
 }
 
 const Title = ({ title }: Titleprops) => {
-  return <Tit title={title} />;
+  return <Titles>{title}</Titles>;
 };
 export default Title;

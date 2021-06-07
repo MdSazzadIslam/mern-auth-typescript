@@ -3,7 +3,7 @@ import { Redirect, Route } from "react-router";
 
 const PrivateRoute = ({ component, isAuthenticated, ...rest }: any) => {
   const routeComponent = (props: any) =>
-    localStorage.getItem("token") ? (
+    localStorage.getItem("user") ? (
       React.createElement(component, props)
     ) : (
       <Redirect to={{ pathname: "/" }} />
