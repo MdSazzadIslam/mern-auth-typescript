@@ -38,7 +38,7 @@ const Registration: React.FC = () => {
     <Wrapper>
       <Container>
         <form onSubmit={(e) => handleRegistration(e, user)}>
-          <Title>Registration </Title>
+          <Title title="Registration" />
           <Input
             type="text"
             placeholder="Write your first name here..."

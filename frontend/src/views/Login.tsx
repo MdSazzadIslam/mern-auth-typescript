@@ -48,7 +48,7 @@ const Login: React.FC = () => {
     <Wrapper>
       <Container>
         <form onSubmit={(e: React.FormEvent) => handleLogin(e, user)}>
-          <Title>Login </Title>
+          <Title title="Login" />
           <Input
             type="text"
             placeholder="Write your email here..."
