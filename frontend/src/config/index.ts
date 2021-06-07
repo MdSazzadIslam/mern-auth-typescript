@@ -1,5 +1,5 @@
 import axios from "axios";
-import getLocalStorage from "./storage";
+//import getLocalStorage from "./storage";
 
 const service = axios.create({
   baseURL: process.env.REACT_APP_API_URL,
@@ -13,7 +13,7 @@ service.interceptors.request.use(
     // Do something before request is sent
 
     config.headers["Content-Type"] = "application/json";
-    config.headers["Authorization"] = `Bearer ${getLocalStorage() || ""}`;
+    //config.headers["Authorization"] = `Bearer ${getLocalStorage() || ""}`;
 
     return config;
   },

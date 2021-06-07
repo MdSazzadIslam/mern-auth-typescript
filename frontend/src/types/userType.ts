@@ -1,4 +1,4 @@
-interface IUser {
+export interface IUser {
   _id: string;
   firstName: string;
   lastName: string;
@@ -6,12 +6,11 @@ interface IUser {
   password: string;
 }
 
-type UserProps = {
+export type UserProps = {
   user: IUser;
-  login: (e, user) => void;
 };
 
-type ApiResponse = {
+export type ApiResponse = {
   msg: string;
   status: string;
   usrs: IUser[];

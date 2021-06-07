@@ -28,10 +28,10 @@ const registration = async (
       });
     } else {
       const userExists = await checkEmailExist(email);
-
+      console.log(userExists);
       if (userExists) {
         return res
-          .status(400)
+          .status(409)
           .send({ success: false, msg: "Email already exists" });
       }
 
