@@ -41,5 +41,5 @@ yarn install or npm install
 ![Registration](https://user-images.githubusercontent.com/63356649/121197505-2ddae500-c893-11eb-898d-ff5136b20fe2.JPG)
 
 Contact
-https://sazzad-islam-88.vercel.app/
+Webstie: https://sazzad-islam-88.vercel.app/
 
