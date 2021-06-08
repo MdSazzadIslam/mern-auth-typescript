@@ -20,3 +20,15 @@ Contributions are what make the open source community such an amazing place to b
 4.	Push to the Branch (git push origin feature/AwesomeFeature)
 5.	Open a Pull Request
 
+You can run the project locally by following the steps below.
+Installation
+1.	Clone the repo
+git clone https://github.com/MdSazzadIslam/mern-auth-typescript
+2.	Install NPM packages
+yarn install or npm install
+3. Create an .env file pull all mondoDB connection string there
+
+![Login](https://user-images.githubusercontent.com/63356649/121197194-ec4a3a00-c892-11eb-8d3d-11482a52089f.JPG)
+![Registration](https://user-images.githubusercontent.com/63356649/121197201-ed7b6700-c892-11eb-8c2c-bc9fb6c6d0c8.JPG)
+
+
