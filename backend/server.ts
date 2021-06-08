@@ -5,7 +5,7 @@ import cors from "cors";
 import logger from "morgan";
 import * as path from "path";
 import * as fs from "fs";
-import bodyParser from "body-parser";
+
 import userRoute from "./routes/userRoute";
 import * as dotenv from "dotenv";
 dotenv.config({ path: "./.env" });
@@ -30,8 +30,6 @@ const main = async () => {
   );
   //setup the logger
   app.use(logger("combined", { stream: accessLogStream }));
-  //Serves all the request which includes /images in the url from Images folder
-  app.use("/images", express.static(__dirname + "/images"));
 
   app.get("/", (req, res) => {
     res.send("API is running");
@@ -40,9 +38,7 @@ const main = async () => {
   app.use("/api/user", userRoute);
   app.listen(process.env.PORT, () => {
     console.log(
-      "Server is running at http://localhost:%s in %s mode",
-      process.env.PORT,
-      process.env.NODE_ENV
+      `⚡️[server]: running at https://localhost:${process.env.PORT}  ${process.env.NODE_ENV}`
     );
   });
 };

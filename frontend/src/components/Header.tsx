@@ -1,12 +1,16 @@
-import { Link, useHistory } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import styled from "styled-components";
 
-const Head = styled.section`
-  width: 100%;
-  background: black;
+const Wrapper = styled.section`
+  background-color: #24252a;
+   een;
+  align-items: center;
   height: 50px;
-  top: 0;
   position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  z-index: 100;
+ 
 `;
 
 const LogoutButton = styled.button`
@@ -16,11 +20,20 @@ const LogoutButton = styled.button`
   padding: 10px;
   margin-top: 7px;
   opacity: 0.3;
+
   &:hover {
     opacity: 0.5;
     cursor: pointer;
     transition: 0.5s;
   }
+
+  border-radius: 20px;
+  background-color: #0f111c;
+  color: #fff;
+
+  outline: none;
+  cursor: pointer;
+  border: none;
 `;
 
 const Header = () => {
@@ -28,14 +41,14 @@ const Header = () => {
 
   const logoutHandler = () => {
     debugger;
+    localStorage.removeItem("user");
     history.push("/");
   };
   return (
     <>
-      <Head>
-        <Link to="/">Logout</Link>
+      <Wrapper>
         <LogoutButton onClick={logoutHandler}>Logout</LogoutButton>
-      </Head>
+      </Wrapper>
     </>
   );
 };

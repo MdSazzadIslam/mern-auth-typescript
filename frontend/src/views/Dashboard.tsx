@@ -4,15 +4,9 @@ import styled from "styled-components";
 
 const Wrapper = styled.section`
   height: 100vh;
-
-  width: 100vw;
+  width: 100%;
   align-self: stretch;
   overflow: scroll;
-  background: linear-gradient(
-    to bottom right,
-    rgb(12, 157, 197),
-    rgb(201, 109, 216)
-  );
 `;
 
 const Title = styled.h1`

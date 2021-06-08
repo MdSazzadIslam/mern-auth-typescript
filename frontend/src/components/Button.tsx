@@ -31,15 +31,10 @@ type ButtonType = "button" | "submit";
 interface ButtonProps {
   title: string;
   type: ButtonType;
-  disabled: boolean;
 }
 
-const Button = ({ title, type, disabled }: ButtonProps) => {
-  return (
-    <Btn type={type} disabled={disabled}>
-      {title}
-    </Btn>
-  );
+const Button = ({ title, type }: ButtonProps) => {
+  return <Btn type={type}>{title}</Btn>;
 };
 
 Button.defaultProps = {

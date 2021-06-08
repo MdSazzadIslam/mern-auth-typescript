@@ -79,7 +79,7 @@ const Registration: React.FC = () => {
           />
 
           <Link to="/">Login</Link>
-          <Button disabled={user ? false : true} title="Login" type="submit" />
+          <Button title="Login" type="submit" />
         </form>
       </Container>
     </Wrapper>
