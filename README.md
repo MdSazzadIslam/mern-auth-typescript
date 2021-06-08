@@ -11,6 +11,15 @@ Built With
 	TypeScript
 	styled-components
 
+Features
+Login/Register with email and password
+Switch between login and register
+View profile after sign in
+Private Route
+Custom components with typescript
+store user data into localstorage
+Create and Use of JWT Token
+Logout
 
 Contributing
 Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are greatly appreciated.
@@ -31,5 +40,6 @@ yarn install or npm install
 ![Login](https://user-images.githubusercontent.com/63356649/121197194-ec4a3a00-c892-11eb-8d3d-11482a52089f.JPG)
 ![Registration](https://user-images.githubusercontent.com/63356649/121197505-2ddae500-c893-11eb-898d-ff5136b20fe2.JPG)
 
-
+Contact
+https://sazzad-islam-88.vercel.app/
 
