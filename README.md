@@ -3,6 +3,7 @@ The MERN Stack – Authentication system with Typescript, styled-component.
 
 Typescript is a typed super set of JavaScript. If you are new to Typescript it is highly recommended to become familiar with it first before proceeding. You can check out its documentation https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html
 
+Don't forget to give this repo a ⭐ if you like this repo and want to appreciate my efforts
 
 ![Build](https://user-images.githubusercontent.com/63356649/121199687-f3724780-c894-11eb-82ff-9007ba6d5f30.JPG)
 
@@ -14,3 +15,4 @@ Typescript is a typed super set of JavaScript. If you are new to Typescript it i
 Contact
 Webstie: https://sazzad-islam-88.vercel.app/
 
+Don't forget to give this repo a ⭐ if you like this repo and want to appreciate my efforts
